@@ -2,7 +2,7 @@
 
 SG_ID="sg-0907dc5741a6a0a17" # replace with your ID
 AMI_ID="ami-0220d79f3f480ecf5"
-ZONE_ID="Z05013202FKF0ZL12WAOP"
+ZONE_ID="Z03117972Y7J0POIUKL7C"
 DOMAIN_NAME="daws88s.online"
 
 for instance in $@
