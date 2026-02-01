@@ -23,13 +23,13 @@ VALIDATE(){
         echo -e "$2 ... $G SUCCESS $N" | tee -a $LOGS_FILE
     fi
 }
-dnf module disable nodejs -y >&&$LOGS_FILE
+dnf module disable nodejs -y &>>$LOGS_FILE
 VALIDATE $? "Disabling Nodejs Default version"
 
-dnf module enable nodejs:20 -y >&&$LOGS_FILE
+dnf module enable nodejs:20 -y &>>$LOGS_FILE
 VALIDATE $? "Enabling nodejs 20"
 
-dnf install nodejs -y >&&$LOGS_FILE
+dnf install nodejs -y &>>$LOGS_FILE
 VALIDATE $? "Install NodeJS"
 
 useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop
